@@ -165,20 +165,19 @@ public class ListaEncadeadaOrdenada {
         }
 
         ListNode itr = head;
+        Comparable temp;
 
-        while (itr.next != null) {
+        for (int i = 0; i < this.size(); i++) {
+            itr = head;
+            while (itr.next != null) {
+                if (itr.element.compareTo(itr.next.element) > 0) {
+                    temp = itr.element;
+                    itr.element = itr.next.element;
+                    itr.next.element = temp;
+                }
 
+                itr = itr.next;
+            }
         }
-
-
-        /*Dois laços de repetição:
-         * 1- Substitui os caracteres especias, além de passar o toLower;
-         * 2- Ordenar em ordem alfabética a lista encadeada.
-         *
-         * Vetor do tamanho 'size' da lista encadeada
-         *
-         *
-         * */
-
     }
 }
