@@ -169,9 +169,20 @@ public class ListaEncadeadaOrdenada {
         if (head == null || head.next == null) {
             return;
         }
+        
+        while (itr.next != null) {
+
+        }
 
 
-    }
+        /*Dois laços de repetição:
+         * 1- Substitui os caracteres especias, além de passar o toLower;
+         * 2- Ordenar em ordem alfabética a lista encadeada.
+         *
+         * Vetor do tamanho 'size' da lista encadeada
+         *
+         *
+         * */
 
 
 }

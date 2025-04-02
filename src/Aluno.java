@@ -34,7 +34,14 @@ public class Aluno implements Comparable {
     }
     @Override
     public int compareTo(Object O) {
-        Aluno a=(Aluno)O;
-        return this.nome.compareTo(a.nome);
+        Aluno a=(Aluno) O;
+        String tempA, tempThis;
+
+        tempA = a.nome;
+        tempThis = this.nome;
+        tempThis = tempThis.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase();
+        tempA = tempA.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase();
+
+        return tempThis.compareTo(tempA);
     }
 }
