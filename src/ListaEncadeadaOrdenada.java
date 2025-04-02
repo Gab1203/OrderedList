@@ -158,6 +158,20 @@ public class ListaEncadeadaOrdenada {
         return toBeOverridden;
     }
 
+    public void sort() {
+        ArrayList <String> list = new ArrayList <String>();
+        String [] array = new String[size];
+        list.toArray(array);
+
+        list = list.replaceAll("[^a-zA-Z0-9]", " ");
+
+        ListNode itr = head;
+        if (head == null || head.next == null) {
+            return;
+        }
+
+
+    }
 
 
 }
