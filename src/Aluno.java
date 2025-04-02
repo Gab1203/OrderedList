@@ -39,8 +39,8 @@ public class Aluno implements Comparable {
 
         tempA = a.nome;
         tempThis = this.nome;
-        tempThis = tempThis.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase();
-        tempA = tempA.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase();
+        tempThis = tempThis.replaceAll("[^\\p{ASCII}]", " ").toLowerCase();
+        tempA = tempA.replaceAll("[^\\p{ASCII}]", " ").toLowerCase();
 
         return tempThis.compareTo(tempA);
     }
